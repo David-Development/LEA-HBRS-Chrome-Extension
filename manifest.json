@@ -1,0 +1,43 @@
+{
+	"manifest_version": 2,
+	"name": "HBRS - LEA Connector",
+	"description": "Keeps your LEA session alive. You can download course material just via one click.",
+	"version": "0.1",
+	"background": {
+		"scripts": ["/js/jquery-2.0.3.min.js", "/js/background.js"],
+        "persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": [ "*://lea.hochschule-bonn-rhein-sieg.de/*" ],
+			"css": ["/css/styles.css"],
+			"js": ["/js/jquery-2.0.3.min.js", "/lib/zepto.min.js", "/js/content.js"],
+			"all_frames": true
+		}
+	],
+	"permissions": [
+		"tabs",
+        "downloads",
+        "alarms",
+        "storage",
+		"*://lea.hochschule-bonn-rhein-sieg.de/*"
+		//"*://google.com/*"
+		//"storage"
+	],
+	"icons": { 
+		"16": "img/icon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "img/icon48.png",
+			"38": "img/icon48.png"
+		},
+		"default_popup": "popup.html"
+	},
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"web_accessible_resources": [
+		"img/icon128.png"
+	]
+}

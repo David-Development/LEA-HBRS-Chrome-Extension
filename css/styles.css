@@ -1,0 +1,24 @@
+/**
+ * Chrome Extension 
+ * Custom CSS
+ *	
+ */
+
+#header_logo {
+    height: 0;
+    visibility: collapse;
+}
+
+#ilFooter {
+    height: auto;
+}
+
+#lea_extension_menu {
+    margin-left: 50px;
+    margin-top: 0px;
+}
+
+#lea_extension_menu li {
+    display: inline;
+    padding: 20px;
+}
