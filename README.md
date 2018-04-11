@@ -1,6 +1,6 @@
 # Chrome Extension for LEA (H-BRS University)
 
-This extensions keeps your lea sessions active. No more signing in! If you enter your credentials, it can automatically log you back in if you get kicked out of a lea session. And you can browser the content of a course in a simple html file browser.
+This extensions keeps your lea sessions active. No more signing in! If you enter your credentials, it can automatically log you back in if you get kicked out of a lea session. And you can browser the content of a course in a simple html file browser. It also reduces the size of the footer. And last but not least it supports a "bookmark"-style navigation bar to navigate to your most frequent courses.
 
 ## Getting Started
 
@@ -30,7 +30,6 @@ The main files you will need to edit are:
 - This contains all of your extension information.
 - As an example, the storage permission has been added.
 - The default popup window for this extension is called `popup.html`.
-- Google Analytics tracking requirement has also been added.
 
 > popup.html
 
@@ -43,3 +42,8 @@ The main files you will need to edit are:
 - Contains extension height and width.
 - Once the extension breaks the height overflow, a styled CSS scroll bar is added.
 - Style tweaks are also present to deal with scroll bar presence.
+
+> js/content.js
+
+- used to perform auto-login 
+- used to add shortcut-links on top of website
